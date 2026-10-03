@@ -1,0 +1,31 @@
+{
+  "name": "React Js Learning",
+  "version": "1.0.0",
+  "description": "This is React Learning",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purushottamrajput7/ReactJSLearning.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Purushottam Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/purushottamrajput7/ReactJSLearning/issues"
+  },
+  "homepage": "https://github.com/purushottamrajput7/ReactJSLearning#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
+}

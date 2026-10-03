@@ -1,28 +1,5 @@
-/*
-
-<div class = "container">
-      <div class = "col1">
-            <h2 class = "h2">Hello H2 from col1<h2>
-      <div>
-      <div class = "col2">
-            <h2 class = "h2">Hello H2 from col2<h2>
-      <div>
-<div>
-
-
-
-*/
-
-//const root = document.getElementById("root");
-// const heading = React.createElement(
-//   "h1",
-//   { className: "heading", id: "h1" },
-//   "Hello World!",
-// );
-
-// console.log(heading);
-
-// ReactDOM.createRoot(root).render(heading);
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const container = React.createElement(
   "div",
@@ -34,7 +11,7 @@ const container = React.createElement(
   React.createElement(
     "div",
     { className: "col2" },
-    React.createElement("h2", { className: "h2" }, "Hello H2 from col2"),
+    React.createElement("h2", { className: "h2" }, "Hello H2 from col2 "),
     React.createElement("h3", { className: "h2" }, "Hello H3 from col2"),
   ),
 );
