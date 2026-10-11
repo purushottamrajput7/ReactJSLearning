@@ -18,3 +18,10 @@
 - Diffrential Bundling - To Supports older version browsers
 - Creates different dev and production bundles.
 - Can host your apps on HTTPs server (npx parcel index.html --https).
+
+# JSX - Javascript XML
+
+- Way of writing HTML inside the react project
+- It is just a syntax
+- It is like the combination of Javascript and HTML but JSX is not an HTML inside javascript.
+- JSX is HTML and Jvascript like syntex.
