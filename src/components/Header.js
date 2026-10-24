@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { LOGO } from "../../constants/localization";
 
 const Header = () => {
+  const [logingBtnText, setLoginBtnText] = useState("Login");
+
   return (
     <div className="header-wrapper">
       <div className="container">
@@ -21,6 +23,18 @@ const Header = () => {
             </li>
             <li>
               <a href="/cart">Cart</a>
+            </li>
+            <li>
+              <button
+                className="btn login-btn"
+                onClick={() => {
+                  logingBtnText == "Login"
+                    ? setLoginBtnText("Logout")
+                    : setLoginBtnText("Login");
+                }}
+              >
+                {logingBtnText}
+              </button>
             </li>
           </ul>
         </div>

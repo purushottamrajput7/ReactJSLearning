@@ -183,3 +183,87 @@ img {
     cursor: pointer;
   }
 }
+
+/* Shimmar Card */
+.shimmar-card {
+  background: #ffffff;
+  border-radius: 16px;
+  width: calc(33.33% - 10px);
+  padding: 0;
+  box-shadow: 4px 4px 5px #00000080;
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin: center;
+  transition: all 0.3s ease;
+  min-height: 400px;
+}
+.shimmar-img {
+  padding-bottom: 60%;
+  background: #e5e5e5;
+}
+.shimmar-heading {
+  width: 100%;
+  height: 40px;
+  background: grey;
+}
+.shimmar-content {
+  padding: 20px;
+}
+.shimmar-star {
+  margin: 10px 0 0;
+  background: grey;
+  height: 20px;
+}
+
+.shimmar-cusins {
+  background: grey;
+  height: 30px;
+  margin: 10px 0 0;
+}
+.shimmar-address {
+  margin: 10px 0 0;
+  background: grey;
+  height: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 1.2;
+  display: inline-block;
+  max-width: 150px;
+  width: 100%;
+  background-color: red;
+  color: #fff;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(243, 108, 108);
+  }
+}
+
+.search {
+  margin: 0 0 30px;
+}
+.search-input {
+  padding: 12px 24px;
+  border: 1px solid grey;
+  width: 300px;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 50px;
+  color: black;
+  margin: 0 20px 0 0;
+}
+.search-btn {
+  padding: 12px 24px;
+  max-width: 200px;
+  background: green;
+  height: 70px;
+  font-size: 24px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
