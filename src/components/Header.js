@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LOGO } from "../../constants/localization";
+import { Link } from "react-router";
 
 const Header = () => {
   const [logingBtnText, setLoginBtnText] = useState("Login");
@@ -13,18 +14,18 @@ const Header = () => {
         <div className="menu">
           <ul className="list">
             <li className="item">
-              <a href="/home">Home</a>
+              <Link to="/home">Home</Link>
             </li>
-            <li>
-              <a href="/about">About</a>
+            <li className="item">
+              <Link to="/about">About Us</Link>
             </li>
-            <li>
-              <a href="/contact">Contact</a>
+            <li className="item">
+              <Link to="/contact">Contact</Link>
             </li>
-            <li>
-              <a href="/cart">Cart</a>
+            <li className="item">
+              <Link to="/cart">Cart</Link>
             </li>
-            <li>
+            <li className="item">
               <button
                 className="btn login-btn"
                 onClick={() => {

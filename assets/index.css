@@ -267,3 +267,20 @@ img {
   align-items: center;
   justify-content: center;
 }
+.error {
+  color: red;
+  font-size: 24px;
+}
+.user-card {
+  background: #bac1ba;
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+}
+h2.user-name {
+  margin: 0 0 10px;
+}
+button.btn.class-btn {
+  max-width: 100%;
+  background: black;
+}

@@ -12,15 +12,19 @@ const RestaurantContainer = () => {
   }, []);
 
   const fetchRestaurantdata = async () => {
-    const data = fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0035068&lng=77.5890953&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
-    );
-    const fetchedData = await (await data).json();
-    const filteredData =
-      fetchedData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
-    setListOfRestaurant(filteredData);
-    setAllListOfRestaurant(filteredData);
+    try {
+      const data = fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0035068&lng=77.5890953&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+      );
+      const fetchedData = await (await data).json();
+      const filteredData =
+        fetchedData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      setListOfRestaurant(filteredData);
+      setAllListOfRestaurant(filteredData);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
   return (
     <div className="restaurent-wrapper">
