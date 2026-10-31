@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { LOGO } from "../../constants/localization";
 import { Link } from "react-router";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [logingBtnText, setLoginBtnText] = useState("Login");
+  const onlineStatus = useOnlineStatus();
 
   return (
     <div className="header-wrapper">
@@ -13,6 +15,7 @@ const Header = () => {
         </div>
         <div className="menu">
           <ul className="list">
+            <li>{onlineStatus === true ? "Online ✅" : "Offline 🔴"}</li>
             <li className="item">
               <Link to="/home">Home</Link>
             </li>
@@ -24,6 +27,9 @@ const Header = () => {
             </li>
             <li className="item">
               <Link to="/cart">Cart</Link>
+            </li>
+            <li className="item">
+              <Link to="/grocery">Grocery</Link>
             </li>
             <li className="item">
               <button

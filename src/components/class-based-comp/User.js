@@ -7,16 +7,34 @@ class User extends React.Component {
     this.state = {
       count: 2,
       count2: 5,
+      userData: {},
     };
-    console.log("Child Constructor Called");
+    //console.log("Child Constructor Called");
   }
-  componentDidMount() {
-    console.log("Child Component Did mount Called");
+  async componentDidMount() {
+    //console.log("Child Component Did mount Called");
+    const data = await fetch("https://api.github.com/users/purushottamrajput7");
+    const jsonData = await data.json();
+    // this.setState({
+    //   userData: jsonData,
+    // });
+    //console.log(jsonData);
+
+    this.timer = setInterval(() => {
+      console.log("Interval Called");
+    }, 1000);
+  }
+  componentDidUpdate() {
+    //console.log("componentDitUpdate Called");
+  }
+  componentWillUnmount() {
+    //console.log("componentWillUnmount Called");
+    clearInterval(this.timer);
   }
   render() {
-    console.log("Child Render Called");
+    //console.log("Child Render Called");
     //Destructuring the props
-    const { userName } = this.props;
+    const { name, login, location } = this.state.userData;
     return (
       <div className="user-card">
         <h2>Count: {this.state.count}</h2>
@@ -32,9 +50,9 @@ class User extends React.Component {
         >
           Increment Count
         </button>
-        <h3 className="user-name">Name : {userName}</h3>
-        <p className="contact-info">@purushottam</p>
-        <address className="location">Noida, Uttar Pardesh</address>
+        <h3 className="user-name">Name : {name}</h3>
+        <p className="contact-info">{login}</p>
+        <address className="location">{location}</address>
       </div>
     );
   }
